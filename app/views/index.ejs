@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app='socketRooms' ng-cloak>
+<head>
+  <meta charset="utf-8">
+  <title>Socket Rooms Demo</title>
+  <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="/css/style.css" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Pick (click) a room to see the demo</a>
+        </div>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class="roomlink"><a href="#/room/topic1">#Topic 1</a></li>
+          <li class="roomlink"><a href="#/room/topic2">#Topic 2</a></li>
+          <li class="roomlink"><a href="#/room/topic3">#Topic 3</a></li>
+          <li class="roomlink"><a href="#/room/topic4">#Topic 4</a></li>
+        </ul>
+
+      </div>
+    </nav>
+  </header>
+
+  <div ng-view>
+  </div>
+
+  <footer class='fnotes'>
+    @ 2016
+  </footer>
+</body>
+<script src="/angular/angular.min.js" charset="utf-8"></script>
+<script src="/angular-route/angular-route.min.js" charset="utf-8"></script>
+<script src="/angular-bootstrap/ui-bootstrap-tpls.min.js" charset="utf-8"></script>
+<script src="/socket.io/socket.io.js" type="text/javascript"></script>
+<script src="/js/socketRooms.js" charset="utf-8"></script>
+</html>

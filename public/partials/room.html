@@ -1,0 +1,21 @@
+<div id='roomContent' class='room' ng-controller='roomController' ng-init='init()'>
+  <div class='row' >
+    <div class='col-sm-12 col-md-12'>
+      <h2>Welcome to {{roomName}}</h2>
+    </div>
+  </div>
+  <div class='row' >
+    <div class='col-sm-12 col-md-12'>
+      <textarea name="message" rows="4" cols="80" ng-model='roomMessage' placeholder="type your message here"></textarea>
+      <br />
+      <button type="button" name="button" class='btn btn-primary' ng-click='sendRoomMessage()'>Send</button>
+    </div>
+  </div>
+  <div class='row roommessages' >
+    <div class='col-sm-12 col-md-12'>
+      <p ng-repeat='msg in pubMessages track by $index' class='well well-sm' style='margin-bottom: 5px;'>
+        {{$index + 1}} | {{ now | date:'h:mm:s a'}} : {{msg}}
+      </p>
+    </div>
+  </div>
+</div>
